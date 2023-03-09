@@ -1,0 +1,84 @@
+NAME: Nevin Liang
+EMAIL: nliang868@g.ucla.edu
+ID: 705575353
+
+FILE DESCRIPTION
+=================
+
+lab0.c:             a program that copies its standard input to its standard output
+                    using read/write and file descriptors. coded entirely in C. 
+                    supports a range of flags such as --input, --output, 
+                    --segfault, and --catch.
+
+Makefile:           the project's Makefile. supports 4 targets including 1 default
+                    make default: builds the code. requires lab0.c to exist
+                    make check: checks the code against a smoke test of my own
+                    make dist: creates the tarball file that includes all necessary
+                                files to submit.
+                    make clean: cleans the code of all files created by the make
+                                file such as tarball, lab0 executable, etc.
+
+P0_check.sh:        test script provided by the instructor. copied directly line by 
+                    line from the specifications sheet
+
+breakpoint.png:     used breakpoint to get the state of the program before fault.
+                    then printed the pointer to get the value of it which was 0.
+
+backtrace.png:      used gdb with the -g flag during compilation to see where the 
+                    segfault was when it was run. program crashed and I used bt or
+                    backtrace to figure out which line and what the line was that 
+                    caused it.
+
+SMOKE TEST CASES
+==================
+My Smoke Test is split up into multiple sections:
+
+- Testing input/output cases
+    - 4 cases here: 
+        - input and no output (print to stdout)
+        - no input and output (read from stdin)
+        - input and output flags
+        - no input and no output (read from stdin and print to stdout)
+- Testing error codes 1-4
+    - 4 cases here:
+        - unrecognized argument: I used --badarg which is a bad argument
+        - unable to open input file: I used --input BADINFILE which does not exist
+        - unable to open output file: I used --output BADFOLDER/BADOUTFILE which cannot
+            be created because there is no folder called BADFOLDER
+        - caught and received SIGSEGV: --catch --segfault to raise and catch the fault
+- Testing really bad stuff
+    - tested segfault without catching it
+    - tested a missing argument to a flag like --input=
+        - this resulted in returning error code 2, which is invalid input file, which makes sense
+
+SOURCES USED
+=============
+manual pages:
+    - https://man7.org/linux/man-pages/man3/getopt.3.html
+    - https://man7.org/linux/man-pages/man2/signal.2.html
+    - https://man7.org/linux/man-pages/man3/strerror.3.html
+    - https://man7.org/linux/man-pages/man2/open.2.html
+
+reference websites:
+    - https://linux.die.net/man/3/fprintf
+    - https://en.cppreference.com/w/c/language/switch
+    - https://www.tutorialspoint.com/c_standard_library/c_function_strerror.htm
+    - https://www.gnu.org/software/libc/manual/html_node/Basic-Signal-Handling.html
+
+tutorials/other:
+    - http://courses.cms.caltech.edu/cs11/material/general/usage.html
+    - http://www.crasseux.com/books/ctutorial/The-exit-function.html
+    - http://web.cs.ucla.edu/~harryxu/courses/111/winter21/ProjectGuide/fd_juggling.html
+    - https://stackoverflow.com/questions/11871921/suppress-and-ignore-output-for-makefile
+
+OTHER INFORMATION
+==================
+Did use some non-reference websites but those were for coding related things that didn't 
+have to do with the core concepts of the project. This included stuff like how to split a string
+across multiple lines in C, as well as how to suppress output of shell commands in the Makefile.
+
+Also did some bit manipulation in the form of `optvals` because I didn't want to make 4 variables
+that kept track of which flags were called. Hope that that's okay!
+
+
+

@@ -1,0 +1,23 @@
+NAME: Nevin Liang
+EMAIL: nliang868@g.ucla.edu
+ID: 705575353
+
+FILE DESCRIPTIONS
+=================
+
+lab4b.c:	lab C file for an embedded application that builds and runs on
+			an embedded system. acts as a temperature monitor and can log values
+
+Makefile:	used to build and test application. can create dist and also clean
+			files created by it. has a check target to do a quick smoke check
+
+RESEARCH
+========
+
+a ton of code taken from all 3 TA slides
+!! also only runs on embedded system. does not run on LINUX system.
+!! prints out time in UTC time I believe. Professor Xu said that 
+	was okay on Piazza I think.
+
+** hardest part of the project was literally coding the Makefile
+	-- really bad at shell scripting in Makefile and too many bugs

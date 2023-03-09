@@ -1,0 +1,128 @@
+Total: 1235 samples
+    1066  86.3%  86.3%     1066  86.3% lock
+      28   2.3%  88.6%       92   7.4% SortedList_insert
+      23   1.9%  90.4%       23   1.9% ?? /usr/src/debug////////glibc-2.17-c758a686/string/../sysdeps/x86_64/multiarch/strcmp-sse42.S:161
+      20   1.6%  92.1%       76   6.2% SortedList_lookup
+      17   1.4%  93.4%       17   1.4% ?? /usr/src/debug////////glibc-2.17-c758a686/string/../sysdeps/x86_64/multiarch/strcmp-sse42.S:1734
+      10   0.8%  94.3%       10   0.8% ?? /usr/src/debug////////glibc-2.17-c758a686/string/../sysdeps/x86_64/multiarch/strcmp-sse42.S:204
+       9   0.7%  95.0%        9   0.7% ?? /usr/src/debug////////glibc-2.17-c758a686/string/../sysdeps/x86_64/multiarch/strcmp-sse42.S:1734
+       6   0.5%  95.5%        6   0.5% ?? /usr/src/debug////////glibc-2.17-c758a686/string/../sysdeps/x86_64/multiarch/strcmp-sse42.S:165
+       6   0.5%  96.0%        6   0.5% ?? /usr/src/debug////////glibc-2.17-c758a686/string/../sysdeps/x86_64/multiarch/strcmp-sse42.S:1733
+       6   0.5%  96.4%        6   0.5% ?? /usr/src/debug////////glibc-2.17-c758a686/string/../sysdeps/x86_64/multiarch/strcmp-sse42.S:1734
+       5   0.4%  96.8%        5   0.4% ?? /usr/src/debug////////glibc-2.17-c758a686/string/../sysdeps/x86_64/multiarch/strcmp-sse42.S:203
+       4   0.3%  97.2%        4   0.3% ?? /usr/src/debug////////glibc-2.17-c758a686/string/../sysdeps/x86_64/multiarch/strcmp-sse42.S:239
+       4   0.3%  97.5%        4   0.3% ?? /usr/src/debug////////glibc-2.17-c758a686/string/../sysdeps/x86_64/multiarch/strcmp-sse42.S:263
+       4   0.3%  97.8%        4   0.3% ?? /usr/src/debug////////glibc-2.17-c758a686/string/../sysdeps/x86_64/multiarch/strcmp-sse42.S:266
+       3   0.2%  98.1%        3   0.2% ?? /usr/src/debug////////glibc-2.17-c758a686/string/../sysdeps/x86_64/multiarch/strcmp-sse42.S:211
+       3   0.2%  98.3%        3   0.2% ?? /usr/src/debug////////glibc-2.17-c758a686/string/../sysdeps/x86_64/multiarch/strcmp-sse42.S:1734
+       2   0.2%  98.5%        2   0.2% ?? /usr/src/debug////////glibc-2.17-c758a686/string/../sysdeps/x86_64/multiarch/strcmp-sse42.S:206
+       2   0.2%  98.6%        2   0.2% ?? /usr/src/debug////////glibc-2.17-c758a686/string/../sysdeps/x86_64/multiarch/strcmp-sse42.S:212
+       2   0.2%  98.8%        2   0.2% ?? /usr/src/debug////////glibc-2.17-c758a686/string/../sysdeps/x86_64/multiarch/strcmp-sse42.S:240
+       2   0.2%  98.9%        2   0.2% ?? /usr/src/debug////////glibc-2.17-c758a686/string/../sysdeps/x86_64/multiarch/strcmp-sse42.S:263
+       2   0.2%  99.1%        2   0.2% ?? /usr/src/debug////////glibc-2.17-c758a686/string/../sysdeps/x86_64/multiarch/strcmp-sse42.S:976
+       1   0.1%  99.2%        1   0.1% ?? /usr/src/debug////////glibc-2.17-c758a686/misc/../sysdeps/unix/sysv/linux/x86_64/clone.S:96
+       1   0.1%  99.3%        1   0.1% ?? /usr/src/debug////////glibc-2.17-c758a686/string/../sysdeps/x86_64/multiarch/strcmp-sse42.S:202
+       1   0.1%  99.4%        1   0.1% ?? /usr/src/debug////////glibc-2.17-c758a686/string/../sysdeps/x86_64/multiarch/strcmp-sse42.S:205
+       1   0.1%  99.4%        1   0.1% ?? /usr/src/debug////////glibc-2.17-c758a686/string/../sysdeps/x86_64/multiarch/strcmp-sse42.S:225
+       1   0.1%  99.5%        1   0.1% ?? /usr/src/debug////////glibc-2.17-c758a686/string/../sysdeps/x86_64/multiarch/strcmp-sse42.S:226
+       1   0.1%  99.6%        1   0.1% ?? /usr/src/debug////////glibc-2.17-c758a686/string/../sysdeps/x86_64/multiarch/strcmp-sse42.S:233
+       1   0.1%  99.7%        1   0.1% ?? /usr/src/debug////////glibc-2.17-c758a686/string/../sysdeps/x86_64/multiarch/strcmp-sse42.S:237
+       1   0.1%  99.8%        1   0.1% ?? /usr/src/debug////////glibc-2.17-c758a686/string/../sysdeps/x86_64/multiarch/strcmp-sse42.S:239
+       1   0.1%  99.8%        1   0.1% ?? /usr/src/debug////////glibc-2.17-c758a686/string/../sysdeps/x86_64/multiarch/strcmp-sse42.S:271
+       1   0.1%  99.9%        1   0.1% ?? /usr/src/debug////////glibc-2.17-c758a686/string/../sysdeps/x86_64/multiarch/strcmp-sse42.S:273
+       1   0.1% 100.0%        1   0.1% ?? /usr/src/debug////////glibc-2.17-c758a686/string/../sysdeps/x86_64/multiarch/strcmp-sse42.S:972
+       0   0.0% 100.0%     1234  99.9% ?? /usr/src/debug////////glibc-2.17-c758a686/misc/../sysdeps/unix/sysv/linux/x86_64/clone.S:118
+       0   0.0% 100.0%     1234  99.9% start_thread
+       0   0.0% 100.0%     1234  99.9% thread_list
+ROUTINE ====================== thread_list in /u/ee/ugrad/nevin/Desktop/proj2b/lab2_list.c
+     0   1234 Total samples (flat / cumulative)
+     .      .  119:     int strsum = 0;
+     .      .  120:     for (int i = 0; i < LENGTH - 1; i++) strsum += (str[i] - 'a');
+     .      .  121:     return strsum % lists;
+     .      .  122: }
+     .      .  123: 
+---
+     .      .  124: void* thread_list(void* arg) {
+     .      .  125:     int* index = arg;
+     .      .  126:     int thread = *index;
+     .      .  127: 
+     .      .  128:     for (int iter = 0; iter < iters; iter++) {
+     .      .  129:         int hval = hash(allnodes[thread * iters + iter].key);
+     .    593  130:         lock(hval);
+     .     92  131:         SortedList_insert(&sorted[hval], &allnodes[thread * iters + iter]);
+     .      .  132:         unlock(hval);
+     .      .  133:     }
+     .      .  134:     for (int i = 0; i < lists; i++) {
+     .      1  135:         lock(i);
+     .      .  136:         if (SortedList_length(&sorted[i]) == -1) {
+     .      .  137:             fprintf(stderr, "length error\n");
+     .      .  138:             exit(2);
+     .      .  139:         }
+     .      .  140:         unlock(i);
+     .      .  141:     }
+     .      .  142:     for (int iter = 0; iter < iters; iter++) {
+     .      .  143:         int hval = hash(allnodes[thread * iters + iter].key);
+     .    472  144:         lock(hval);
+     .      .  145:         SortedListElement_t* node = 
+     .     76  146:             SortedList_lookup(&sorted[hval], allnodes[thread * iters + iter].key);
+     .      .  147:         if (node == NULL) {
+     .      .  148:             fprintf(stderr, "list corrupted\n");
+     .      .  149:             exit(2);
+     .      .  150:         }
+     .      .  151:         SortedList_delete(node);
+     .      .  152:         unlock(hval);
+     .      .  153:     }
+     .      .  154:     return 0;
+     .      .  155: }
+---
+     .      .  156: 
+     .      .  157: int main(int argc, char **argv) {
+     .      .  158:     atexit(exitfunc);
+     .      .  159:     signal(SIGSEGV, sighandler);
+     .      .  160:     srand(time(0));
+ROUTINE ====================== thread_list in /u/ee/ugrad/nevin/Desktop/proj2b/lab2_list.c
+     0   1234 Total samples (flat / cumulative)
+     .      .  119:     int strsum = 0;
+     .      .  120:     for (int i = 0; i < LENGTH - 1; i++) strsum += (str[i] - 'a');
+     .      .  121:     return strsum % lists;
+     .      .  122: }
+     .      .  123: 
+---
+     .      .  124: void* thread_list(void* arg) {
+     .      .  125:     int* index = arg;
+     .      .  126:     int thread = *index;
+     .      .  127: 
+     .      .  128:     for (int iter = 0; iter < iters; iter++) {
+     .      .  129:         int hval = hash(allnodes[thread * iters + iter].key);
+     .    593  130:         lock(hval);
+     .     92  131:         SortedList_insert(&sorted[hval], &allnodes[thread * iters + iter]);
+     .      .  132:         unlock(hval);
+     .      .  133:     }
+     .      .  134:     for (int i = 0; i < lists; i++) {
+     .      1  135:         lock(i);
+     .      .  136:         if (SortedList_length(&sorted[i]) == -1) {
+     .      .  137:             fprintf(stderr, "length error\n");
+     .      .  138:             exit(2);
+     .      .  139:         }
+     .      .  140:         unlock(i);
+     .      .  141:     }
+     .      .  142:     for (int iter = 0; iter < iters; iter++) {
+     .      .  143:         int hval = hash(allnodes[thread * iters + iter].key);
+     .    472  144:         lock(hval);
+     .      .  145:         SortedListElement_t* node = 
+     .     76  146:             SortedList_lookup(&sorted[hval], allnodes[thread * iters + iter].key);
+     .      .  147:         if (node == NULL) {
+     .      .  148:             fprintf(stderr, "list corrupted\n");
+     .      .  149:             exit(2);
+     .      .  150:         }
+     .      .  151:         SortedList_delete(node);
+     .      .  152:         unlock(hval);
+     .      .  153:     }
+     .      .  154:     return 0;
+     .      .  155: }
+---
+     .      .  156: 
+     .      .  157: int main(int argc, char **argv) {
+     .      .  158:     atexit(exitfunc);
+     .      .  159:     signal(SIGSEGV, sighandler);
+     .      .  160:     srand(time(0));

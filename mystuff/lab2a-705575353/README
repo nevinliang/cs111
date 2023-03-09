@@ -1,0 +1,93 @@
+NAME: Nevin Liang
+EMAIL: nliang868@g.ucla.edu
+ID: 705575353
+
+FILE DESCRIPTION
+=================
+
+lab2_list.c:    a C program that implements the (below) specified command line options 
+                and produces the (below) specified output statistics
+
+lab2_add.c:     a C program that implements and tests a shared variable add function, 
+                implements the (below) specified command line options, and produces 
+                the (below) specified output statistics.
+
+SortedList.h:   a header file (supplied by us) describing the interfaces for linked 
+                list operations.
+
+SortedList.c:   a C module that implements insert, delete, lookup, and length methods 
+                for a sorted doubly linked list (described in the provided header file, 
+                including correct placement of yield calls).
+
+Makefile:       make lab2a: builds all files
+                make add: builds just lab2_add.c
+                make list: builds just lab2_list.c
+                make tests: runs all shell script test files (calls lab2a if not built)
+                make graphs: creates all graphs in .png files using .gp files
+                make dist: creates the tarball file that includes all necessary
+                            files to submit.
+                make clean: cleans the code of all files created by the make
+                            file such as tarball, lab2a executables, etc.
+
+*.png:          all graphs created by make graphs
+
+lab2_add.csv:   output of the addtest.sh file ran in make tests
+
+lab2_list.csv:  output of the listtest.sh file ran in make tests
+
+QUESTIONS
+==========
+2.1.1:  it takes many iterations before a result is seen because if only one iteration is run
+        then it will finish long before another thread even begins, so there will be no inter-
+        ference in the code. also the chance that a thread will yield is not as likely when theres
+        only 1 chance this can happen. when theres only 1 iteration, the code only runs once so the
+        likelihood that it will yield is low, as by the time the second thread starts the first one
+        has probably already finished.
+
+2.1.2:  yield runs are much slower because you need to switch threads every time a yield is called
+        context switches take a long time. the additional time is going into the context switch
+        the current thread's data has to be saved and then it has to be rewritten when returned, etc.
+        no you can't get an accurate /op time because context switches take a large part of the time
+        as you can tell from the difference in times for yield and no yield
+
+2.1.3:  the more iterations you have, the number of context switches only grows by a little, but the
+        total number of operations increases by a multiple (number of iterations). when iterations
+        is large, the signficance of context switch time goes down. we could plot the graph of cost
+        per iteration multiplied by number of iterations and see the minimum value which would be the
+        optimal number of iterations.
+
+2.1.4:  as we said before, with low iterations the context swithces are what take the longest, so the
+        total impact that the speed of the lock has is not that much compared to the amount of time
+        each switch takes. all three options slow down when the number of iterations increases because
+        of competition of resources (vs less competition in previous part). also, these locks are run
+        every iteration (unlike context switches which dont increase much with increase in iterations)
+
+2.2.1:  the variation in time per mutex-protected operation vs the number of threads differs a lot
+        between part 1 and part 2 of this project. in the case of add, it didn't increase much when
+        threads were large. however, in the case of list, it kept on increasing. for add, it increased
+        a bit and then flattened out kind of. in the case of list, it was pretty close to a straight line
+        that kept increasing. i believe this is because list operations are much more complicated and
+        require many more steps of assembly so more yields.
+
+2.2.2:  the variation in time per protected operation vs the number of threads for list operations 
+        protected by spin vs mutex locks is kind of different but not by much. they both increase 
+        pretty close to linearly and dont have any signs of flattening out. (for list). for add though
+        spin increases without bound it seems like. mutex is more controlled and flattens at the end.
+        it seems like mutex is much better for bigger iterations because a while loop feels like it has to 
+        take up an unnecessary amount of resources while a simple check will do like in mutex. that is why
+        mutex is much lower than spin for the case of add.
+
+
+SOURCES USED
+=============
+mostly the TA powerpoint slides
+Man Pages:
+    - https://www.gnu.org/software/make/manual/
+    - https://www.man7.org/linux/man-pages/man1/chmod.1.html
+    - https://linux.die.net/man/3/pthread_create
+    - https://www.man7.org/linux/man-pages/man3/pthread_join.3.html
+    - https://linux.die.net/man/3/malloc
+    - https://linux.die.net/man/3/clock_gettime
+    - https://linux.die.net/man/3/strcat
+    - https://www.ibm.com/support/knowledgecenter/SSGH2K_13.1.3/com.ibm.xlc1313.aix.doc/compiler_ref/bif_gcc_atomic_val_comp_swap.html
+    - https://www.ibm.com/support/knowledgecenter/en/SSGH2K_13.1.0/com.ibm.xlc131.aix.doc/compiler_ref/bif_gcc_atomic_lock_release.html

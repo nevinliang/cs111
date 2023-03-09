@@ -1,0 +1,44 @@
+NAME: Nevin Liang
+EMAIL: nliang868@g.ucla.edu
+ID: 705575353
+
+FILE DESCRIPTION
+=================
+
+lab1a.c:            a program that simulates a character-at-a-time full duplex terminal
+                    I/O. uses polled I/O and passes input and output between two processes
+                    namely the terminal and bash. supports no flags which is just a basic
+                    showcase of how termios works (echoes output back to terminal), as well
+                    as a --shell flag that simulates the shell.
+
+Makefile:           the project's Makefile. supports 3 targets including 1 default
+                    make default: builds the code. requires lab1a.c to exist
+                    make dist: creates the tarball file that includes all necessary
+                                files to submit.
+                    make clean: cleans the code of all files created by the make
+                                file such as tarball, lab1a executable, etc.
+
+SOURCES USED
+=============
+
+Man Pages:
+    https://man7.org/linux/man-pages/man2/read.2.html
+    https://man7.org/linux/man-pages/man3/termios.3.html
+    https://man7.org/linux/man-pages/man3/getopt.3.html
+    https://man7.org/linux/man-pages/man2/pipe.2.html
+    https://man7.org/linux/man-pages/man2/fork.2.html
+    https://man7.org/linux/man-pages/man3/exec.3.html
+    https://man7.org/linux/man-pages/man2/poll.2.html
+    https://man7.org/linux/man-pages/man2/write.2.html
+
+Online Communities:
+    https://stackoverflow.com/questions/8454228/how-can-i-get-the-nth-character-of-a-string
+    https://stackoverflow.com/questions/21248840/example-of-waitpid-in-use
+
+Online Tutorials:
+    http://www.unixguide.net/unix/programming/2.1.2.shtml
+    https://tldp.org/LDP/lpg/node11.html
+    https://linux.die.net/man/2/waitpid
+
+TA Slides:
+    https://ccle.ucla.edu/pluginfile.php/4071891/mod_resource/content/0/Week%202.pdf
